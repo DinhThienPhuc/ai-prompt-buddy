@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="app-header">
+        <h1>AI Prompt Buddy</h1>
+        <div class="utils">
+          <button class="theme-toggle js-theme-toggle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-sun sun-icon"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" />
+              <path d="M12 20v2" />
+              <path d="m4.93 4.93 1.41 1.41" />
+              <path d="m17.66 17.66 1.41 1.41" />
+              <path d="M2 12h2" />
+              <path d="M20 12h2" />
+              <path d="m6.34 17.66-1.41 1.41" />
+              <path d="m19.07 4.93-1.41 1.41" />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-moon moon-icon"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+          </button>
+          <button class="language-toggle js-language-toggle">
+            <span class="language language-vi">Vi</span>
+            <span class="language language-en">En</span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <div class="template-list js-template-list">
+          <!-- Templates will be populated by JS -->
+        </div>
+
+        <div class="template-detail js-template-detail">
+          <button class="back-button js-back-button"></button>
+          <h2 class="template-name js-template-name"></h2>
+          <div class="input-fields js-input-fields"></div>
+          <div class="preview-section">
+            <h3 class="preview-label js-preview-label"></h3>
+            <div class="preview js-preview"></div>
+            <button class="send-prompt-button js-send-prompt"></button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>

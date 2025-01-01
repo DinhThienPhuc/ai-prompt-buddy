@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "AI Prompt Buddy",
+  "version": "0.0.1",
+  "description": "AI Prompt Buddy is a tool to help you generate writing prompts.",
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "scripts/background.js"
+  }
+}
